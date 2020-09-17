@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using bookList.Context;
 using Microsoft.EntityFrameworkCore;
+using bookList.repositories.classes;
+using bookList.repositories.interfaces;
 
 
 namespace BookList
@@ -30,6 +32,7 @@ namespace BookList
             services.AddControllers();
             string connectionString =   Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<MainContext>(option => option.UseSqlServer(connectionString));
+            services.AddScoped<IBookRepository,BookRepository>();
         }
 
        

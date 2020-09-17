@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RdUeTuhT42WB+ExoCbsiPLsBm0zNPf0J8JJL5fIy/k49i6EuPN97H5AqxtnESXukrXeD0l2dINHh86kfnntrBA==",
+  "dgSpecHash": "gR5bqlYrqxPFWcWFaYqpqTwQKqugn68YCy/SRzoOgNXDr1Tjqf5AQaLp6YZu6glCSboGgxFzdexyE/n4sDKnTQ==",
   "success": true,
-  "projectFilePath": "H:\\net practice\\bookList\\bookList.csproj",
+  "projectFilePath": "H:\\net practice\\bookListWebApi\\bookList\\bookList.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NTI\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\NTI\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

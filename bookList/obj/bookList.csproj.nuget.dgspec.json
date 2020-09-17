@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\net practice\\bookList\\bookList.csproj": {}
+    "H:\\net practice\\bookListWebApi\\bookList\\bookList.csproj": {}
   },
   "projects": {
-    "H:\\net practice\\bookList\\bookList.csproj": {
+    "H:\\net practice\\bookListWebApi\\bookList\\bookList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\net practice\\bookList\\bookList.csproj",
+        "projectUniqueName": "H:\\net practice\\bookListWebApi\\bookList\\bookList.csproj",
         "projectName": "bookList",
-        "projectPath": "H:\\net practice\\bookList\\bookList.csproj",
+        "projectPath": "H:\\net practice\\bookListWebApi\\bookList\\bookList.csproj",
         "packagesPath": "C:\\Users\\NTI\\.nuget\\packages\\",
-        "outputPath": "H:\\net practice\\bookList\\obj\\",
+        "outputPath": "H:\\net practice\\bookListWebApi\\bookList\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
