@@ -23,5 +23,12 @@ namespace bookList.Controllers
             return Ok(allBooks);
         }
 
+        [Route("api/books/{bookId}")]
+        [HttpGet]
+        public ActionResult<Book> getSingleBook(int bookId){
+            var book= _repo.singleGet(bookId);
+            return Ok(book);
+        }
+
     }
 }

@@ -17,9 +17,23 @@ namespace bookList.repositories.classes
         public BookRepository (MainContext mainContext){
            _mainContext = mainContext;
         }
+
+    
         public ActionResult<IEnumerable<Book>> Get(){
             var book = _mainContext.books.ToList();
             return book;
+        }
+
+        ActionResult<Book> singleGet(int id){
+            return _mainContext.books.FirstOrDefault(b=>b.BookId==id);
+        }
+
+
+        public async void Post(Book book){
+            if(book){
+
+            }
+
         }
     }
 }
