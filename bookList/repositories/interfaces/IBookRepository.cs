@@ -11,13 +11,13 @@ namespace bookList.repositories.interfaces
     {
         public ActionResult<IEnumerable<Book>> Get();
 
-        ActionResult<Book> singleGet(int id);
+        public ActionResult<Book> singleGet(int id);
 
-        public void Post(Book book);
+        public Task Post(Book book);
 
-        public void Update(Book book);
+        public Task Update(int id, Book book);
 
-        public void Delete(int id);
+        public Task Delete(int? id);
 
 
     }

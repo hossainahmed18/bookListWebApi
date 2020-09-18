@@ -24,16 +24,51 @@ namespace bookList.repositories.classes
             return book;
         }
 
-        ActionResult<Book> singleGet(int id){
+        public ActionResult<Book> singleGet(int id){
             return _mainContext.books.FirstOrDefault(b=>b.BookId==id);
         }
 
 
-        public async void Post(Book book){
-            if(book){
-
+        public async Task Post(Book book){
+            if(book == null){
+                throw new ArgumentNullException(nameof(Book));
             }
+            await _mainContext.books.AddAsync(book);
+            await _mainContext.SaveChangesAsync();
 
         }
+
+        public async Task Update(int id,Book book){
+            if(book == null){
+                throw new ArgumentNullException(nameof(Book));
+            }
+            Book existingBook= _mainContext.books.FirstOrDefault(b=>b.BookId==id);
+
+            if(existingBook==null){
+                throw new ArgumentNullException(nameof(existingBook));
+            }
+            existingBook.BookName = book.BookName;
+            existingBook.AuthorName = book.AuthorName;
+            existingBook.publisherName = book.publisherName;
+
+            _mainContext.Attach(existingBook).State= Microsoft.EntityFrameworkCore.EntityState.Modified;
+            await _mainContext.SaveChangesAsync();
+
+        }
+
+        public async Task Delete(int? id){
+            if(id == null){
+                throw new ArgumentNullException(nameof(Book));
+            }
+            Book existingBook= _mainContext.books.FirstOrDefault(b=>b.BookId==id);
+
+            if(existingBook==null){
+                throw new ArgumentNullException(nameof(existingBook));
+            }
+            _mainContext.books.Remove(existingBook);
+            await _mainContext.SaveChangesAsync();
+        }
+
+
     }
 }
